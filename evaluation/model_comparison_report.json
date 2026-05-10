@@ -1,0 +1,1197 @@
+{
+  "model_comparisons": [
+    {
+      "agent": "guardrailCheck",
+      "provider": "groq",
+      "model": "llama-3.1-8b-instant",
+      "label": "groq:llama-3.1-8b-instant",
+      "attempted_cases": 4,
+      "scored_cases": 4,
+      "passed": 4,
+      "accuracy": 100.0,
+      "p50_latency_ms": 498.41,
+      "avg_latency_ms": 567.0,
+      "avg_token_estimate": 217.5,
+      "parse_failures": 0,
+      "provider_error_count": 0,
+      "status": "OK",
+      "skipped": false,
+      "skip_reason": null,
+      "case_results": [
+        {
+          "id": "TC01",
+          "pass": true,
+          "latency_ms": 840.53,
+          "token_estimate": 216,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "is_banking_related": true,
+            "no_pii": true,
+            "sentiment_check": true
+          },
+          "expected": {
+            "is_banking_related": true,
+            "no_pii": true,
+            "sentiment_check": true
+          }
+        },
+        {
+          "id": "TC11",
+          "pass": true,
+          "latency_ms": 444.83,
+          "token_estimate": 213,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "is_banking_related": false,
+            "no_pii": true,
+            "sentiment_check": true
+          },
+          "expected": {
+            "is_banking_related": false,
+            "no_pii": true,
+            "sentiment_check": true
+          }
+        },
+        {
+          "id": "TC14",
+          "pass": true,
+          "latency_ms": 430.66,
+          "token_estimate": 212,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "is_banking_related": true,
+            "no_pii": false,
+            "sentiment_check": true
+          },
+          "expected": {
+            "is_banking_related": true,
+            "no_pii": false,
+            "sentiment_check": true
+          }
+        },
+        {
+          "id": "TC24",
+          "pass": true,
+          "latency_ms": 551.99,
+          "token_estimate": 229,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "is_banking_related": true,
+            "no_pii": true,
+            "sentiment_check": false
+          },
+          "expected": {
+            "is_banking_related": true,
+            "no_pii": true,
+            "sentiment_check": false
+          }
+        }
+      ]
+    },
+    {
+      "agent": "guardrailCheck",
+      "provider": "groq",
+      "model": "llama-3.3-70b-versatile",
+      "label": "groq:llama-3.3-70b-versatile",
+      "attempted_cases": 4,
+      "scored_cases": 4,
+      "passed": 4,
+      "accuracy": 100.0,
+      "p50_latency_ms": 461.03,
+      "avg_latency_ms": 470.87,
+      "avg_token_estimate": 217.5,
+      "parse_failures": 0,
+      "provider_error_count": 0,
+      "status": "OK",
+      "skipped": false,
+      "skip_reason": null,
+      "case_results": [
+        {
+          "id": "TC01",
+          "pass": true,
+          "latency_ms": 443.98,
+          "token_estimate": 216,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "is_banking_related": true,
+            "no_pii": true,
+            "sentiment_check": true
+          },
+          "expected": {
+            "is_banking_related": true,
+            "no_pii": true,
+            "sentiment_check": true
+          }
+        },
+        {
+          "id": "TC11",
+          "pass": true,
+          "latency_ms": 478.09,
+          "token_estimate": 213,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "is_banking_related": false,
+            "no_pii": true,
+            "sentiment_check": true
+          },
+          "expected": {
+            "is_banking_related": false,
+            "no_pii": true,
+            "sentiment_check": true
+          }
+        },
+        {
+          "id": "TC14",
+          "pass": true,
+          "latency_ms": 532.83,
+          "token_estimate": 212,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "is_banking_related": true,
+            "no_pii": false,
+            "sentiment_check": true
+          },
+          "expected": {
+            "is_banking_related": true,
+            "no_pii": false,
+            "sentiment_check": true
+          }
+        },
+        {
+          "id": "TC24",
+          "pass": true,
+          "latency_ms": 428.56,
+          "token_estimate": 229,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "is_banking_related": true,
+            "no_pii": true,
+            "sentiment_check": false
+          },
+          "expected": {
+            "is_banking_related": true,
+            "no_pii": true,
+            "sentiment_check": false
+          }
+        }
+      ]
+    },
+    {
+      "agent": "guardrailCheck",
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "label": "groq:openai/gpt-oss-20b",
+      "attempted_cases": 4,
+      "scored_cases": 0,
+      "passed": 0,
+      "accuracy": 0,
+      "p50_latency_ms": 0,
+      "avg_latency_ms": 0,
+      "avg_token_estimate": 0,
+      "parse_failures": 0,
+      "provider_error_count": 4,
+      "status": "ERROR",
+      "skipped": false,
+      "skip_reason": null,
+      "case_results": [
+        {
+          "id": "TC01",
+          "pass": false,
+          "latency_ms": 478.03,
+          "token_estimate": 205,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": {
+            "is_banking_related": true,
+            "no_pii": true,
+            "sentiment_check": true
+          }
+        },
+        {
+          "id": "TC11",
+          "pass": false,
+          "latency_ms": 515.9,
+          "token_estimate": 203,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": {
+            "is_banking_related": false,
+            "no_pii": true,
+            "sentiment_check": true
+          }
+        },
+        {
+          "id": "TC14",
+          "pass": false,
+          "latency_ms": 504.52,
+          "token_estimate": 202,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": {
+            "is_banking_related": true,
+            "no_pii": false,
+            "sentiment_check": true
+          }
+        },
+        {
+          "id": "TC24",
+          "pass": false,
+          "latency_ms": 534.88,
+          "token_estimate": 218,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": {
+            "is_banking_related": true,
+            "no_pii": true,
+            "sentiment_check": false
+          }
+        }
+      ]
+    },
+    {
+      "agent": "guardrailCheck",
+      "provider": "groq",
+      "model": "qwen/qwen3-32b",
+      "label": "groq:qwen/qwen3-32b",
+      "attempted_cases": 4,
+      "scored_cases": 0,
+      "passed": 0,
+      "accuracy": 0,
+      "p50_latency_ms": 0,
+      "avg_latency_ms": 0,
+      "avg_token_estimate": 0,
+      "parse_failures": 0,
+      "provider_error_count": 4,
+      "status": "ERROR",
+      "skipped": false,
+      "skip_reason": null,
+      "case_results": [
+        {
+          "id": "TC01",
+          "pass": false,
+          "latency_ms": 613.84,
+          "token_estimate": 205,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"ma",
+          "actual": null,
+          "expected": {
+            "is_banking_related": true,
+            "no_pii": true,
+            "sentiment_check": true
+          }
+        },
+        {
+          "id": "TC11",
+          "pass": false,
+          "latency_ms": 558.7,
+          "token_estimate": 203,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": {
+            "is_banking_related": false,
+            "no_pii": true,
+            "sentiment_check": true
+          }
+        },
+        {
+          "id": "TC14",
+          "pass": false,
+          "latency_ms": 543.83,
+          "token_estimate": 202,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": {
+            "is_banking_related": true,
+            "no_pii": false,
+            "sentiment_check": true
+          }
+        },
+        {
+          "id": "TC24",
+          "pass": false,
+          "latency_ms": 580.05,
+          "token_estimate": 218,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": {
+            "is_banking_related": true,
+            "no_pii": true,
+            "sentiment_check": false
+          }
+        }
+      ]
+    },
+    {
+      "agent": "guardrailCheck",
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "label": "groq:meta-llama/llama-4-scout-17b-16e-instruct",
+      "attempted_cases": 4,
+      "scored_cases": 4,
+      "passed": 4,
+      "accuracy": 100.0,
+      "p50_latency_ms": 447.45,
+      "avg_latency_ms": 465.33,
+      "avg_token_estimate": 217.5,
+      "parse_failures": 0,
+      "provider_error_count": 0,
+      "status": "OK",
+      "skipped": false,
+      "skip_reason": null,
+      "case_results": [
+        {
+          "id": "TC01",
+          "pass": true,
+          "latency_ms": 429.37,
+          "token_estimate": 216,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "is_banking_related": true,
+            "no_pii": true,
+            "sentiment_check": true
+          },
+          "expected": {
+            "is_banking_related": true,
+            "no_pii": true,
+            "sentiment_check": true
+          }
+        },
+        {
+          "id": "TC11",
+          "pass": true,
+          "latency_ms": 544.46,
+          "token_estimate": 213,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "is_banking_related": false,
+            "no_pii": true,
+            "sentiment_check": true
+          },
+          "expected": {
+            "is_banking_related": false,
+            "no_pii": true,
+            "sentiment_check": true
+          }
+        },
+        {
+          "id": "TC14",
+          "pass": true,
+          "latency_ms": 421.96,
+          "token_estimate": 212,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "is_banking_related": true,
+            "no_pii": false,
+            "sentiment_check": true
+          },
+          "expected": {
+            "is_banking_related": true,
+            "no_pii": false,
+            "sentiment_check": true
+          }
+        },
+        {
+          "id": "TC24",
+          "pass": true,
+          "latency_ms": 465.53,
+          "token_estimate": 229,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "is_banking_related": true,
+            "no_pii": true,
+            "sentiment_check": false
+          },
+          "expected": {
+            "is_banking_related": true,
+            "no_pii": true,
+            "sentiment_check": false
+          }
+        }
+      ]
+    },
+    {
+      "agent": "inquiryParser",
+      "provider": "groq",
+      "model": "llama-3.1-8b-instant",
+      "label": "groq:llama-3.1-8b-instant",
+      "attempted_cases": 4,
+      "scored_cases": 4,
+      "passed": 3,
+      "accuracy": 75.0,
+      "p50_latency_ms": 559.87,
+      "avg_latency_ms": 551.62,
+      "avg_token_estimate": 321.5,
+      "parse_failures": 0,
+      "provider_error_count": 0,
+      "status": "OK",
+      "skipped": false,
+      "skip_reason": null,
+      "case_results": [
+        {
+          "id": "TC01",
+          "pass": true,
+          "latency_ms": 536.78,
+          "token_estimate": 332,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Mortgage",
+            "loan_amount_requested": 250000,
+            "employment_status": "Full-time",
+            "risk_score_estimate": "Low",
+            "summary_response": "We will review your full-time employment as an engineer and consider your loan application. For a mortgage of this type, we will need to carefully assess your overall financial situation. All loan offers and estimates are subject to formal credit review and approval."
+          },
+          "expected_intent": "Mortgage",
+          "expected_risk": "Low"
+        },
+        {
+          "id": "TC02",
+          "pass": true,
+          "latency_ms": 498.18,
+          "token_estimate": 315,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Auto",
+            "loan_amount_requested": 15000,
+            "employment_status": "Part-time",
+            "risk_score_estimate": "Medium",
+            "summary_response": "We'll review your auto loan application. Please provide necessary financial information for a formal credit review and approval. All loan offers and estimates are subject to formal credit review and approval."
+          },
+          "expected_intent": "Auto",
+          "expected_risk": "Medium"
+        },
+        {
+          "id": "TC05",
+          "pass": true,
+          "latency_ms": 582.96,
+          "token_estimate": 339,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Personal",
+            "loan_amount_requested": 100000,
+            "employment_status": "Unemployed",
+            "risk_score_estimate": "High",
+            "summary_response": "We understand you need financial assistance. We do not provide loan guarantees, and all loan offers are subject to formal credit review and approval. Please provide us with complete financial information so we can discuss potential options with you. All loan offers and estimates are subject to formal credit review and approval."
+          },
+          "expected_intent": "Personal",
+          "expected_risk": "High"
+        },
+        {
+          "id": "TC10",
+          "pass": false,
+          "latency_ms": 588.58,
+          "token_estimate": 300,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Personal",
+            "loan_amount_requested": null,
+            "employment_status": "Unknown",
+            "risk_score_estimate": "High",
+            "summary_response": "We'd like to understand your financial situation better. All loan offers and estimates are subject to formal credit review and approval."
+          },
+          "expected_intent": "Personal",
+          "expected_risk": "Medium"
+        }
+      ]
+    },
+    {
+      "agent": "inquiryParser",
+      "provider": "groq",
+      "model": "llama-3.3-70b-versatile",
+      "label": "groq:llama-3.3-70b-versatile",
+      "attempted_cases": 4,
+      "scored_cases": 4,
+      "passed": 4,
+      "accuracy": 100.0,
+      "p50_latency_ms": 689.33,
+      "avg_latency_ms": 682.87,
+      "avg_token_estimate": 329.5,
+      "parse_failures": 0,
+      "provider_error_count": 0,
+      "status": "OK",
+      "skipped": false,
+      "skip_reason": null,
+      "case_results": [
+        {
+          "id": "TC01",
+          "pass": true,
+          "latency_ms": 739.21,
+          "token_estimate": 338,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Mortgage",
+            "loan_amount_requested": 250000,
+            "employment_status": "Full-time",
+            "risk_score_estimate": "Low",
+            "summary_response": "We appreciate your interest in our mortgage products. To proceed, we'll need to review your financial information and credit history. All loan offers and estimates are subject to formal credit review and approval. We'll guide you through the application process to determine the best options available to you."
+          },
+          "expected_intent": "Mortgage",
+          "expected_risk": "Low"
+        },
+        {
+          "id": "TC02",
+          "pass": true,
+          "latency_ms": 613.6,
+          "token_estimate": 322,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Auto",
+            "loan_amount_requested": 15000,
+            "employment_status": "Part-time",
+            "risk_score_estimate": "Medium",
+            "summary_response": "We can review your auto loan request for $15,000. Our decision will be based on a thorough evaluation of your application and credit history. All loan offers and estimates are subject to formal credit review and approval."
+          },
+          "expected_intent": "Auto",
+          "expected_risk": "Medium"
+        },
+        {
+          "id": "TC05",
+          "pass": true,
+          "latency_ms": 689.8,
+          "token_estimate": 325,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Personal",
+            "loan_amount_requested": 100000,
+            "employment_status": "Unemployed",
+            "risk_score_estimate": "High",
+            "summary_response": "We understand your situation and will review your loan application. Please be advised that our loan decisions are based on various factors, including credit history and financial information. All loan offers and estimates are subject to formal credit review and approval."
+          },
+          "expected_intent": "Personal",
+          "expected_risk": "High"
+        },
+        {
+          "id": "TC10",
+          "pass": true,
+          "latency_ms": 688.85,
+          "token_estimate": 333,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Personal",
+            "loan_amount_requested": null,
+            "employment_status": "Unknown",
+            "risk_score_estimate": "Medium",
+            "summary_response": "We offer loans for various purposes, including vehicles and home improvements. To determine the best option for you, we'll need to review your financial information. All loan offers and estimates are subject to formal credit review and approval. Please contact us to discuss your options further."
+          },
+          "expected_intent": "Personal",
+          "expected_risk": "Medium"
+        }
+      ]
+    },
+    {
+      "agent": "inquiryParser",
+      "provider": "groq",
+      "model": "openai/gpt-oss-120b",
+      "label": "groq:openai/gpt-oss-120b",
+      "attempted_cases": 4,
+      "scored_cases": 4,
+      "passed": 3,
+      "accuracy": 75.0,
+      "p50_latency_ms": 1144.59,
+      "avg_latency_ms": 1124.53,
+      "avg_token_estimate": 310.5,
+      "parse_failures": 0,
+      "provider_error_count": 0,
+      "status": "OK",
+      "skipped": false,
+      "skip_reason": null,
+      "case_results": [
+        {
+          "id": "TC01",
+          "pass": false,
+          "latency_ms": 1015.11,
+          "token_estimate": 312,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Mortgage",
+            "loan_amount_requested": 250000,
+            "employment_status": "Full-time",
+            "risk_score_estimate": "Medium",
+            "summary_response": "Thank you for your interest in a mortgage loan. We have recorded your request for a $250,000 mortgage and noted your full-time employment as an engineer. All loan offers and estimates are subject to formal credit review and approval."
+          },
+          "expected_intent": "Mortgage",
+          "expected_risk": "Low"
+        },
+        {
+          "id": "TC02",
+          "pass": true,
+          "latency_ms": 1099.16,
+          "token_estimate": 311,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Auto",
+            "loan_amount_requested": 15000,
+            "employment_status": "Part-time",
+            "risk_score_estimate": "Medium",
+            "summary_response": "Thank you for your inquiry regarding a $15,000 auto loan. Based on the information provided, we will need to review your application further to determine eligibility. All loan offers and estimates are subject to formal credit review and approval."
+          },
+          "expected_intent": "Auto",
+          "expected_risk": "Medium"
+        },
+        {
+          "id": "TC05",
+          "pass": true,
+          "latency_ms": 1190.02,
+          "token_estimate": 304,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Personal",
+            "loan_amount_requested": 100000,
+            "employment_status": "Unemployed",
+            "risk_score_estimate": "High",
+            "summary_response": "We have noted your request for a personal loan of $100,000. Our team will review your information and contact you regarding next steps. All loan offers and estimates are subject to formal credit review and approval."
+          },
+          "expected_intent": "Personal",
+          "expected_risk": "High"
+        },
+        {
+          "id": "TC10",
+          "pass": true,
+          "latency_ms": 1193.81,
+          "token_estimate": 315,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Personal",
+            "loan_amount_requested": null,
+            "employment_status": "Unknown",
+            "risk_score_estimate": "Medium",
+            "summary_response": "Thank you for your inquiry regarding financing for both a vehicle and home improvements. Based on the information provided, we can explore personal loan options that may suit your needs. All loan offers and estimates are subject to formal credit review and approval."
+          },
+          "expected_intent": "Personal",
+          "expected_risk": "Medium"
+        }
+      ]
+    },
+    {
+      "agent": "inquiryParser",
+      "provider": "groq",
+      "model": "qwen/qwen3-32b",
+      "label": "groq:qwen/qwen3-32b",
+      "attempted_cases": 4,
+      "scored_cases": 2,
+      "passed": 2,
+      "accuracy": 100.0,
+      "p50_latency_ms": 1236.95,
+      "avg_latency_ms": 1236.95,
+      "avg_token_estimate": 316.5,
+      "parse_failures": 0,
+      "provider_error_count": 2,
+      "status": "PARTIAL",
+      "skipped": false,
+      "skip_reason": null,
+      "case_results": [
+        {
+          "id": "TC01",
+          "pass": false,
+          "latency_ms": 1748.48,
+          "token_estimate": 261,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected_intent": "Mortgage",
+          "expected_risk": "Low"
+        },
+        {
+          "id": "TC02",
+          "pass": false,
+          "latency_ms": 1190.32,
+          "token_estimate": 260,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to generate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"ma",
+          "actual": null,
+          "expected_intent": "Auto",
+          "expected_risk": "Medium"
+        },
+        {
+          "id": "TC05",
+          "pass": true,
+          "latency_ms": 1633.17,
+          "token_estimate": 312,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Personal",
+            "loan_amount_requested": 100000,
+            "employment_status": "Unemployed",
+            "risk_score_estimate": "High",
+            "summary_response": "We understand your urgent need for a $100,000 personal loan. However, current unemployment status may impact qualification potential. All loan offers and estimates are subject to formal credit review and approval."
+          },
+          "expected_intent": "Personal",
+          "expected_risk": "High"
+        },
+        {
+          "id": "TC10",
+          "pass": true,
+          "latency_ms": 840.73,
+          "token_estimate": 321,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Personal",
+            "loan_amount_requested": null,
+            "employment_status": "Unknown",
+            "risk_score_estimate": "Medium",
+            "summary_response": "We can explore loan options to support your vehicle purchase and home improvements. Our process will evaluate repayment ability based on detailed financial information. All loan offers and estimates are subject to formal credit review and approval."
+          },
+          "expected_intent": "Personal",
+          "expected_risk": "Medium"
+        }
+      ]
+    },
+    {
+      "agent": "inquiryParser",
+      "provider": "groq",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "label": "groq:meta-llama/llama-4-scout-17b-16e-instruct",
+      "attempted_cases": 4,
+      "scored_cases": 4,
+      "passed": 3,
+      "accuracy": 75.0,
+      "p50_latency_ms": 560.54,
+      "avg_latency_ms": 599.9,
+      "avg_token_estimate": 320.5,
+      "parse_failures": 0,
+      "provider_error_count": 0,
+      "status": "OK",
+      "skipped": false,
+      "skip_reason": null,
+      "case_results": [
+        {
+          "id": "TC01",
+          "pass": true,
+          "latency_ms": 740.72,
+          "token_estimate": 318,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Mortgage",
+            "loan_amount_requested": 250000,
+            "employment_status": "Full-time",
+            "risk_score_estimate": "Low",
+            "summary_response": "Thank you for considering our mortgage options. Based on your full-time employment and loan request, we will review your creditworthiness. All loan offers and estimates are subject to formal credit review and approval."
+          },
+          "expected_intent": "Mortgage",
+          "expected_risk": "Low"
+        },
+        {
+          "id": "TC02",
+          "pass": true,
+          "latency_ms": 554.61,
+          "token_estimate": 321,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Auto",
+            "loan_amount_requested": 15000,
+            "employment_status": "Part-time",
+            "risk_score_estimate": "Medium",
+            "summary_response": "Thank you for reaching out about an auto loan. Based on your part-time employment and loan request, we will review your credit profile. All loan offers and estimates are subject to formal credit review and approval."
+          },
+          "expected_intent": "Auto",
+          "expected_risk": "Medium"
+        },
+        {
+          "id": "TC05",
+          "pass": true,
+          "latency_ms": 566.46,
+          "token_estimate": 326,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Personal",
+            "loan_amount_requested": 100000,
+            "employment_status": "Unemployed",
+            "risk_score_estimate": "High",
+            "summary_response": "Thank you for reaching out about a personal loan. Given your current employment status and the loan amount you're requesting, we would need to discuss potential options and requirements. All loan offers and estimates are subject to formal credit review and approval."
+          },
+          "expected_intent": "Personal",
+          "expected_risk": "High"
+        },
+        {
+          "id": "TC10",
+          "pass": false,
+          "latency_ms": 537.81,
+          "token_estimate": 317,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "intent": "Personal",
+            "loan_amount_requested": null,
+            "employment_status": "Unknown",
+            "risk_score_estimate": "Unknown",
+            "summary_response": "We can discuss various loan options that may help with your goals. A personal loan could provide flexibility for multiple expenses. All loan offers and estimates are subject to formal credit review and approval."
+          },
+          "expected_intent": "Personal",
+          "expected_risk": "Medium"
+        }
+      ]
+    },
+    {
+      "agent": "safetyChecks",
+      "provider": "groq",
+      "model": "llama-3.1-8b-instant",
+      "label": "groq:llama-3.1-8b-instant",
+      "attempted_cases": 4,
+      "scored_cases": 4,
+      "passed": 4,
+      "accuracy": 100.0,
+      "p50_latency_ms": 398.97,
+      "avg_latency_ms": 402.74,
+      "avg_token_estimate": 267.8,
+      "parse_failures": 0,
+      "provider_error_count": 0,
+      "status": "OK",
+      "skipped": false,
+      "skip_reason": null,
+      "case_results": [
+        {
+          "id": "CMP01",
+          "pass": true,
+          "latency_ms": 403.51,
+          "token_estimate": 278,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "compliance_pass": true,
+            "violations": []
+          },
+          "expected": true
+        },
+        {
+          "id": "CMP02",
+          "pass": true,
+          "latency_ms": 394.43,
+          "token_estimate": 254,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "compliance_pass": false,
+            "violations": [
+              "NO_GUARANTEE"
+            ]
+          },
+          "expected": false
+        },
+        {
+          "id": "CMP03",
+          "pass": true,
+          "latency_ms": 422.16,
+          "token_estimate": 280,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "compliance_pass": false,
+            "violations": [
+              "NO_ECOA_VIOLATION",
+              "NO_GUARANTEE"
+            ]
+          },
+          "expected": false
+        },
+        {
+          "id": "CMP04",
+          "pass": true,
+          "latency_ms": 390.86,
+          "token_estimate": 259,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "compliance_pass": false,
+            "violations": [
+              "NO_GUARANTEE"
+            ]
+          },
+          "expected": false
+        }
+      ]
+    },
+    {
+      "agent": "safetyChecks",
+      "provider": "groq",
+      "model": "llama-3.3-70b-versatile",
+      "label": "groq:llama-3.3-70b-versatile",
+      "attempted_cases": 4,
+      "scored_cases": 4,
+      "passed": 4,
+      "accuracy": 100.0,
+      "p50_latency_ms": 449.24,
+      "avg_latency_ms": 447.48,
+      "avg_token_estimate": 268.2,
+      "parse_failures": 0,
+      "provider_error_count": 0,
+      "status": "OK",
+      "skipped": false,
+      "skip_reason": null,
+      "case_results": [
+        {
+          "id": "CMP01",
+          "pass": true,
+          "latency_ms": 384.11,
+          "token_estimate": 278,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "compliance_pass": true,
+            "violations": []
+          },
+          "expected": true
+        },
+        {
+          "id": "CMP02",
+          "pass": true,
+          "latency_ms": 507.34,
+          "token_estimate": 256,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "compliance_pass": false,
+            "violations": [
+              "NO_GUARANTEE"
+            ]
+          },
+          "expected": false
+        },
+        {
+          "id": "CMP03",
+          "pass": true,
+          "latency_ms": 410.6,
+          "token_estimate": 278,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "compliance_pass": false,
+            "violations": [
+              "NO_ECOA_VIOLATION"
+            ]
+          },
+          "expected": false
+        },
+        {
+          "id": "CMP04",
+          "pass": true,
+          "latency_ms": 487.87,
+          "token_estimate": 261,
+          "parse_failure": false,
+          "error": null,
+          "actual": {
+            "compliance_pass": false,
+            "violations": [
+              "NO_UDAAP"
+            ]
+          },
+          "expected": false
+        }
+      ]
+    },
+    {
+      "agent": "safetyChecks",
+      "provider": "groq",
+      "model": "openai/gpt-oss-safeguard-20b",
+      "label": "groq:openai/gpt-oss-safeguard-20b",
+      "attempted_cases": 4,
+      "scored_cases": 0,
+      "passed": 0,
+      "accuracy": 0,
+      "p50_latency_ms": 0,
+      "avg_latency_ms": 0,
+      "avg_token_estimate": 0,
+      "parse_failures": 0,
+      "provider_error_count": 4,
+      "status": "ERROR",
+      "skipped": false,
+      "skip_reason": null,
+      "case_results": [
+        {
+          "id": "CMP01",
+          "pass": false,
+          "latency_ms": 734.44,
+          "token_estimate": 270,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": true
+        },
+        {
+          "id": "CMP02",
+          "pass": false,
+          "latency_ms": 580.19,
+          "token_estimate": 246,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": false
+        },
+        {
+          "id": "CMP03",
+          "pass": false,
+          "latency_ms": 502.17,
+          "token_estimate": 268,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": false
+        },
+        {
+          "id": "CMP04",
+          "pass": false,
+          "latency_ms": 495.52,
+          "token_estimate": 251,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": false
+        }
+      ]
+    },
+    {
+      "agent": "safetyChecks",
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "label": "groq:openai/gpt-oss-20b",
+      "attempted_cases": 4,
+      "scored_cases": 0,
+      "passed": 0,
+      "accuracy": 0,
+      "p50_latency_ms": 0,
+      "avg_latency_ms": 0,
+      "avg_token_estimate": 0,
+      "parse_failures": 0,
+      "provider_error_count": 4,
+      "status": "ERROR",
+      "skipped": false,
+      "skip_reason": null,
+      "case_results": [
+        {
+          "id": "CMP01",
+          "pass": false,
+          "latency_ms": 540.86,
+          "token_estimate": 270,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": true
+        },
+        {
+          "id": "CMP02",
+          "pass": false,
+          "latency_ms": 520.27,
+          "token_estimate": 246,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": false
+        },
+        {
+          "id": "CMP03",
+          "pass": false,
+          "latency_ms": 518.72,
+          "token_estimate": 268,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": false
+        },
+        {
+          "id": "CMP04",
+          "pass": false,
+          "latency_ms": 518.01,
+          "token_estimate": 251,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": false
+        }
+      ]
+    },
+    {
+      "agent": "safetyChecks",
+      "provider": "groq",
+      "model": "qwen/qwen3-32b",
+      "label": "groq:qwen/qwen3-32b",
+      "attempted_cases": 4,
+      "scored_cases": 0,
+      "passed": 0,
+      "accuracy": 0,
+      "p50_latency_ms": 0,
+      "avg_latency_ms": 0,
+      "avg_token_estimate": 0,
+      "parse_failures": 0,
+      "provider_error_count": 4,
+      "status": "ERROR",
+      "skipped": false,
+      "skip_reason": null,
+      "case_results": [
+        {
+          "id": "CMP01",
+          "pass": false,
+          "latency_ms": 610.49,
+          "token_estimate": 270,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": true
+        },
+        {
+          "id": "CMP02",
+          "pass": false,
+          "latency_ms": 705.91,
+          "token_estimate": 246,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": false
+        },
+        {
+          "id": "CMP03",
+          "pass": false,
+          "latency_ms": 664.52,
+          "token_estimate": 268,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": false
+        },
+        {
+          "id": "CMP04",
+          "pass": false,
+          "latency_ms": 713.96,
+          "token_estimate": 251,
+          "parse_failure": false,
+          "error": "http_400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}",
+          "actual": null,
+          "expected": false
+        }
+      ]
+    }
+  ]
+}
