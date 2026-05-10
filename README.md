@@ -165,8 +165,3 @@ GROQ_API_KEY=gsk_...
 4. Zero PII forwarding: PII-containing messages stop at Agent 1.
 5. Compliance as final gate: Agent 3 reviews every generated customer-facing response.
 
-## Deliverables
-
-- Architecture rationale: [docs/architecture_rationale.md](docs/architecture_rationale.md)
-- Evaluation report: [docs/evaluation_report.md](docs/evaluation_report.md)
-- Executive email: [docs/executive_email.md](docs/executive_email.md)
